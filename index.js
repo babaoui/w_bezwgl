@@ -9,7 +9,7 @@ b.addEventListener('click', () => {
 	else {
 		var x = s.match(/[\+\-\*\/]/g);
 		var y = s.split(/[\+\-\*\/]/), z = [];
-		z.push(s[0] == '-' ? '+' : '-');
+		if(s[0] != '-') z.push('+');
 		for(let i = 0; i < x.length; ++i) {
 			z.push(y[i]);
 			z.push(x[i] == '+' ? '-' : x[i] == '-' ? '+' : x[i]);
